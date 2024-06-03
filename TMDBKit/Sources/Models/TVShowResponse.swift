@@ -7,6 +7,6 @@
 
 import Foundation
 
-public struct TVShowResponse: Decodable {
-    public let results: [TVShow]
+struct TVShowResponse: Decodable {
+    let results: [TVShow]
 }

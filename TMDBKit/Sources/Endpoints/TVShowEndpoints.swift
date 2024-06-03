@@ -7,7 +7,7 @@
 
 import Foundation
 
-public enum TVShowEndpoints {
+enum TVShowEndpoints {
     case latest
     case popular
     case details(id: Int)

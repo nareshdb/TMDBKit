@@ -8,12 +8,12 @@
 import Foundation
 import Combine
 
-public class AuthManager {
-    public static let shared = AuthManager()
+class AuthManager {
+    static let shared = AuthManager()
     
     private init() {}
     
-    public func authenticate() -> AnyPublisher<AuthToken, NetworkError> {
+    func authenticate() -> AnyPublisher<AuthToken, NetworkError> {
         guard let apiKey = APIConfiguration.shared.getApiKey() else {
             return Fail(error: NetworkError.invalidRequest).eraseToAnyPublisher()
         }

@@ -7,7 +7,7 @@
 
 import Foundation
 
-public enum APIRouter {
+enum APIRouter {
     case getLatestMovies
     case getPopularMovies
     case getMovieDetails(id: Int)

@@ -7,7 +7,7 @@
 
 import Foundation
 
-public enum DiscoverEndpoints {
+enum DiscoverEndpoints {
     case movies
     case tvShows
     

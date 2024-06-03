@@ -9,10 +9,10 @@ import Foundation
 
 import Foundation
 
-public struct AuthToken: Codable {
-    public let success: Bool
-    public let expiresAt: String
-    public let requestToken: String
+struct AuthToken: Codable {
+    let success: Bool
+    let expiresAt: String
+    let requestToken: String
     
     enum CodingKeys: String, CodingKey {
         case success

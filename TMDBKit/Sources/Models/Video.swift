@@ -7,13 +7,13 @@
 
 import Foundation
 
-public struct Video: Decodable {
-    public let id: String
-    public let key: String
-    public let name: String
-    public let site: String
-    public let size: Int
-    public let type: String
+struct Video: Decodable {
+    let id: String
+    let key: String
+    let name: String
+    let site: String
+    let size: Int
+    let type: String
     
     enum CodingKeys: String, CodingKey {
         case id

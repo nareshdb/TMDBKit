@@ -8,24 +8,24 @@
 import Foundation
 import Combine
 
-public protocol APIServiceProtocol {
+protocol APIServiceProtocol {
     func fetchLatestMovies() -> AnyPublisher<[Movie], NetworkError>
     func fetchPopularMovies() -> AnyPublisher<[Movie], NetworkError>
     func fetchMovieDetails(id: Int) -> AnyPublisher<Movie, NetworkError>
 }
 
-public class APIService: APIServiceProtocol {
-    public init() {}
+class APIService: APIServiceProtocol {
+    init() {}
     
-    public func fetchLatestMovies() -> AnyPublisher<[Movie], NetworkError> {
+    func fetchLatestMovies() -> AnyPublisher<[Movie], NetworkError> {
         return APIClient.shared.fetch(.getLatestMovies)
     }
     
-    public func fetchPopularMovies() -> AnyPublisher<[Movie], NetworkError> {
+    func fetchPopularMovies() -> AnyPublisher<[Movie], NetworkError> {
         return APIClient.shared.fetch(.getPopularMovies)
     }
     
-    public func fetchMovieDetails(id: Int) -> AnyPublisher<Movie, NetworkError> {
+    func fetchMovieDetails(id: Int) -> AnyPublisher<Movie, NetworkError> {
         return APIClient.shared.fetch(.getMovieDetails(id: id))
     }
 }

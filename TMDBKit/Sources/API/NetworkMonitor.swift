@@ -7,13 +7,13 @@
 
 import Network
 
-public class NetworkMonitor {
+class NetworkMonitor {
     static let shared = NetworkMonitor()
     
     private let monitor = NWPathMonitor()
     private let queue = DispatchQueue.global(qos: .background)
     
-    public private(set) var isConnected: Bool = false
+    private(set) var isConnected: Bool = false
     
     private init() {
         monitor.pathUpdateHandler = { path in

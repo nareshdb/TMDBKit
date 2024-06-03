@@ -7,11 +7,11 @@
 
 import Foundation
 
-public struct Image: Decodable {
-    public let filePath: String
-    public let width: Int
-    public let height: Int
-    public let aspectRatio: Double
+struct Image: Decodable {
+    let filePath: String
+    let width: Int
+    let height: Int
+    let aspectRatio: Double
     
     enum CodingKeys: String, CodingKey {
         case filePath = "file_path"

@@ -7,12 +7,12 @@
 
 import Foundation
 
-public enum Environment: String {
+enum Environment: String {
     case development = "Development"
     case staging = "Staging"
     case production = "Production"
     
-    public static var current: Environment {
+    static var current: Environment {
         #if DEBUG
         return .development
         #elseif STAGING

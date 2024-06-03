@@ -7,7 +7,7 @@
 
 import Foundation
 
-public enum MovieEndpoints {
+enum MovieEndpoints {
     case latest
     case popular
     case details(id: Int)

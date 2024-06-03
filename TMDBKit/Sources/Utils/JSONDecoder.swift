@@ -7,8 +7,8 @@
 
 import Foundation
 
-public class CustomJSONDecoder {
-    public static func decoder() -> JSONDecoder {
+class CustomJSONDecoder {
+    static func decoder() -> JSONDecoder {
         let decoder = JSONDecoder()
         decoder.keyDecodingStrategy = .convertFromSnakeCase
         decoder.dateDecodingStrategy = .iso8601

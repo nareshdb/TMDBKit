@@ -7,12 +7,12 @@
 
 import Foundation
 
-public struct TVShow: Decodable {
-    public let id: Int
-    public let name: String
-    public let overview: String
-    public let firstAirDate: String
-    public let posterPath: String?
+struct TVShow: Decodable {
+    let id: Int
+    let name: String
+    let overview: String
+    let firstAirDate: String
+    let posterPath: String?
     
     enum CodingKeys: String, CodingKey {
         case id
