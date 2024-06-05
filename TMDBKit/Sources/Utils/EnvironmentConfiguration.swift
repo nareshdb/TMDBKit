@@ -8,6 +8,5 @@
 import Foundation
 
 class EnvironmentConfiguration {
-    static let apiKey = "YOUR_API_KEY"
     static let baseURL = URL(string: "https://api.themoviedb.org/3")!
 }

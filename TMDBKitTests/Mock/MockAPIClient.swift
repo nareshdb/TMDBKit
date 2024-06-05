@@ -7,6 +7,7 @@
 
 import Foundation
 import Combine
+@testable import TMDBKit
 
 class MockAPIClient: APIClient {
     var mockResponse: Any?

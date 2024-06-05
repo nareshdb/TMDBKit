@@ -14,11 +14,11 @@ class AuthManager {
     private init() {}
     
     func authenticate() -> AnyPublisher<AuthToken, NetworkError> {
-        guard let apiKey = APIConfiguration.shared.getApiKey() else {
+        guard let apiKey = APIConfiguration.shared.apiKey else {
             return Fail(error: NetworkError.invalidRequest).eraseToAnyPublisher()
         }
         
-        var urlComponents = URLComponents(url: APIConfiguration.shared.baseURL.appendingPathComponent("/authentication/token/new"), resolvingAgainstBaseURL: false)
+        var urlComponents = URLComponents(url: EnvironmentConfiguration.baseURL.appendingPathComponent("/authentication/token/new"), resolvingAgainstBaseURL: false)
         urlComponents?.queryItems = [URLQueryItem(name: "api_key", value: apiKey)]
         
         guard let url = urlComponents?.url else {

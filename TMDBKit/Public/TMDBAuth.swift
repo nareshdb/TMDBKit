@@ -10,7 +10,7 @@ import Foundation
 public class TMDBAuth {
     
     static func setup(apiKey: String) {
-        APIConfiguration.shared.setup(apiKey: apiKey)
+        APIConfiguration.shared.setApiKey(apiKey)
     }
     
 }

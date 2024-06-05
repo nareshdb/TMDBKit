@@ -9,20 +9,11 @@ import Foundation
 
 class APIConfiguration {
     static let shared = APIConfiguration()
+    private(set) var apiKey: String?
     
     private init() {}
     
-    private var apiKey: String?
-    let baseURL = URL(string: "https://api.themoviedb.org/3")!
-    
-    func setup(apiKey: String) {
-        guard self.apiKey == nil else {
-            fatalError("API key can only be set once.")
-        }
-        self.apiKey = apiKey
-    }
-    
-    func getApiKey() -> String? {
-        return apiKey
+    func setApiKey(_ key: String) {
+        self.apiKey = key
     }
 }
