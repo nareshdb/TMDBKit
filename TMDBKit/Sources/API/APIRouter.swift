@@ -13,7 +13,7 @@ enum APIRouter {
     case getMovieDetails(id: Int)
     
     var request: URLRequest? {
-        var urlComponents = URLComponents(string: APIClient.shared.baseURL.absoluteString)
+        var urlComponents = URLComponents(string: APIConfiguration.shared.baseURL.absoluteString)
         
         switch self {
         case .getLatestMovies:
@@ -24,7 +24,7 @@ enum APIRouter {
             urlComponents?.path = "/movie/\(id)"
         }
         
-        urlComponents?.queryItems = [URLQueryItem(name: "api_key", value: APIClient.shared.apiKey)]
+        urlComponents?.queryItems = [URLQueryItem(name: "api_key", value: APIConfiguration.shared.getApiKey())]
         
         guard let url = urlComponents?.url else { return nil }
         return URLRequest(url: url)

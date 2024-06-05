@@ -15,7 +15,7 @@ class APIClientTests: XCTestCase {
     func testFetchLatestMovies() {
         let expectation = self.expectation(description: "Fetch latest movies")
         
-        APIClient.shared.fetch(MovieEndpoints.latest)
+        TMBDAPIClient.fetch(MovieEndpoints.latest)
             .sink(receiveCompletion: { completion in
                 if case .failure(let error) = completion {
                     XCTFail("Error: \(error)")

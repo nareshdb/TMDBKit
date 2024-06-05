@@ -8,12 +8,9 @@
 import Foundation
 import Combine
 
-class APIClient {
-    static let shared = APIClient()
+public class APIClient {
     
-    private init() {}
-    
-    func fetch<T: Decodable>(_ endpoint: APIRouter) -> AnyPublisher<T, NetworkError> {
+    static func fetch<T: Decodable>(_ endpoint: APIRouter) -> AnyPublisher<T, NetworkError> {
         guard let apiKey = APIConfiguration.shared.getApiKey() else {
             return Fail(error: NetworkError.invalidRequest).eraseToAnyPublisher()
         }

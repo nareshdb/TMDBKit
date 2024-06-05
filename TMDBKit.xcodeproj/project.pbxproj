@@ -10,6 +10,8 @@
 		1568D5722C0DF7E0005BAF56 /* TMDBKit.docc in Sources */ = {isa = PBXBuildFile; fileRef = 1568D5712C0DF7E0005BAF56 /* TMDBKit.docc */; };
 		1568D5782C0DF7E0005BAF56 /* TMDBKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1568D56D2C0DF7E0005BAF56 /* TMDBKit.framework */; };
 		1568D57E2C0DF7E0005BAF56 /* TMDBKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 1568D5702C0DF7E0005BAF56 /* TMDBKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		15A937DC2C10237100D7DB71 /* TMDBAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A937DB2C10237100D7DB71 /* TMDBAuth.swift */; };
+		15A937DE2C10245500D7DB71 /* TMDBApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A937DD2C10245500D7DB71 /* TMDBApiClient.swift */; };
 		15E35D292C0DFDCE00E2E18B /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15E35D282C0DFDCE00E2E18B /* APIClient.swift */; };
 		15E35D2B2C0DFDD300E2E18B /* APIRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15E35D2A2C0DFDD200E2E18B /* APIRouter.swift */; };
 		15E35D2D2C0DFDD600E2E18B /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15E35D2C2C0DFDD600E2E18B /* APIService.swift */; };
@@ -66,6 +68,8 @@
 		1568D5702C0DF7E0005BAF56 /* TMDBKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TMDBKit.h; sourceTree = "<group>"; };
 		1568D5712C0DF7E0005BAF56 /* TMDBKit.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = TMDBKit.docc; sourceTree = "<group>"; };
 		1568D5772C0DF7E0005BAF56 /* TMDBKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TMDBKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		15A937DB2C10237100D7DB71 /* TMDBAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TMDBAuth.swift; sourceTree = "<group>"; };
+		15A937DD2C10245500D7DB71 /* TMDBApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TMDBApiClient.swift; sourceTree = "<group>"; };
 		15E35D282C0DFDCE00E2E18B /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		15E35D2A2C0DFDD200E2E18B /* APIRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRouter.swift; sourceTree = "<group>"; };
 		15E35D2C2C0DFDD600E2E18B /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
@@ -154,6 +158,7 @@
 		1568D56F2C0DF7E0005BAF56 /* TMDBKit */ = {
 			isa = PBXGroup;
 			children = (
+				15A937DA2C10232A00D7DB71 /* Public */,
 				15E35D262C0DFD9F00E2E18B /* Resources */,
 				15E35D252C0DFD9900E2E18B /* Scripts */,
 				15E35D242C0DFD9300E2E18B /* Documentation */,
@@ -200,6 +205,15 @@
 				15E35D2E2C0DFDD800E2E18B /* NetworkMonitor.swift */,
 			);
 			path = API;
+			sourceTree = "<group>";
+		};
+		15A937DA2C10232A00D7DB71 /* Public */ = {
+			isa = PBXGroup;
+			children = (
+				15A937DB2C10237100D7DB71 /* TMDBAuth.swift */,
+				15A937DD2C10245500D7DB71 /* TMDBApiClient.swift */,
+			);
+			path = Public;
 			sourceTree = "<group>";
 		};
 		15E35D1A2C0DFD2B00E2E18B /* Extensions */ = {
@@ -474,7 +488,9 @@
 				15E35D4B2C0DFE7500E2E18B /* Video.swift in Sources */,
 				15E35D5B2C0DFEC100E2E18B /* Environment.swift in Sources */,
 				15E35D292C0DFDCE00E2E18B /* APIClient.swift in Sources */,
+				15A937DC2C10237100D7DB71 /* TMDBAuth.swift in Sources */,
 				15E35D2D2C0DFDD600E2E18B /* APIService.swift in Sources */,
+				15A937DE2C10245500D7DB71 /* TMDBApiClient.swift in Sources */,
 				15E35D552C0DFEA800E2E18B /* Publisher+Extensions.swift in Sources */,
 				15E35D392C0DFE1500E2E18B /* TVShowEndpoints.swift in Sources */,
 			);
