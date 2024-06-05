@@ -8,7 +8,6 @@
 // swift-tools-version:5.3
 import PackageDescription
 
-// swift-tools-version:5.3
 let package = Package(
     name: "TMDBKit",
     platforms: [
