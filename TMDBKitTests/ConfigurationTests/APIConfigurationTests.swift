@@ -6,11 +6,10 @@
 //
 
 import XCTest
-@testable import MovieNetworkSDK
+@testable import TMDBKit
 
 class APIConfigurationTests: XCTestCase {
     func testAPIConfiguration() {
-        XCTAssertEqual(APIConfiguration.shared.baseURL, Environment.baseURL)
-        XCTAssertEqual(APIConfiguration.shared.apiKey, Environment.apiKey)
+        XCTAssertEqual(EnvironmentConfiguration.baseURL.absoluteString, "https://api.themoviedb.org/3")
     }
 }

@@ -6,7 +6,7 @@
 //
 
 import XCTest
-@testable import MovieNetworkSDK
+@testable import TMDBKit
 
 class LoggerTests: XCTestCase {
     func testLogMessage() {

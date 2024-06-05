@@ -18,14 +18,14 @@ class APIService: APIServiceProtocol {
     init() {}
     
     func fetchLatestMovies() -> AnyPublisher<[Movie], NetworkError> {
-        return TMBDAPIClient.fetch(.getLatestMovies)
+        return APIClient.shared.fetch(.getTrendingMovies)
     }
     
     func fetchPopularMovies() -> AnyPublisher<[Movie], NetworkError> {
-        return TMBDAPIClient.fetch(.getPopularMovies)
+        return APIClient.shared.fetch(.getPopularMovies)
     }
     
     func fetchMovieDetails(id: Int) -> AnyPublisher<Movie, NetworkError> {
-        return TMBDAPIClient.fetch(.getMovieDetails(id: id))
+        return APIClient.shared.fetch(.getMovieDetails(id: id))
     }
 }

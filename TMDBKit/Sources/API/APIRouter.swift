@@ -8,25 +8,25 @@
 import Foundation
 
 enum APIRouter {
-    case getLatestMovies
+    case getTrendingMovies
     case getPopularMovies
     case getMovieDetails(id: Int)
     
     var request: URLRequest? {
-        var urlComponents = URLComponents(string: APIConfiguration.shared.baseURL.absoluteString)
+        var urlString: String
         
         switch self {
-        case .getLatestMovies:
-            urlComponents?.path = "/movie/latest"
+        case .getTrendingMovies:
+            urlString = "https://api.themoviedb.org/3/trending/movie/week"
         case .getPopularMovies:
-            urlComponents?.path = "/movie/popular"
+            urlString = "https://api.themoviedb.org/3/movie/popular"
         case .getMovieDetails(let id):
-            urlComponents?.path = "/movie/\(id)"
+            urlString = "https://api.themoviedb.org/3/movie/\(id)"
         }
         
-        urlComponents?.queryItems = [URLQueryItem(name: "api_key", value: APIConfiguration.shared.getApiKey())]
+        guard var urlComponents = URLComponents(string: urlString) else { return nil }
+        urlComponents.queryItems = [URLQueryItem(name: "api_key", value: APIConfiguration.shared.apiKey)]
         
-        guard let url = urlComponents?.url else { return nil }
-        return URLRequest(url: url)
+        return urlComponents.url.map { URLRequest(url: $0) }
     }
 }
