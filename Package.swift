@@ -4,7 +4,7 @@ import PackageDescription
 let package = Package(
     name: "TMDBKit",
     platforms: [
-        .iOS(.v16)
+        .iOS(.v14)
     ],
     products: [
         .library(
@@ -15,9 +15,11 @@ let package = Package(
     targets: [
         .target(
             name: "TMDBKit",
-            dependencies: []),
+            dependencies: [],
+            path: "TMDBKit"),
         .testTarget(
             name: "TMDBKitTests",
-            dependencies: ["TMDBKit"]),
+            dependencies: ["TMDBKit"],
+            path: "TMDBKitTests")
     ]
 )
