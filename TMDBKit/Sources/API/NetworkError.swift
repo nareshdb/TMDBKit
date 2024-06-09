@@ -7,12 +7,13 @@
 
 import Foundation
 
-enum NetworkError: Error {
+public enum TMDBError: Error {
+    case apiKeyNotSet
     case invalidRequest
     case decodingError
     case networkError(Error)
     
-    static func map(_ error: Error) -> NetworkError {
-        return (error as? NetworkError) ?? .networkError(error)
+    static func map(_ error: Error) -> TMDBError {
+        return (error as? TMDBError) ?? .networkError(error)
     }
 }
